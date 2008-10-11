@@ -13,39 +13,34 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace JTessaract
 {
-    public class Logger
+    public partial class ProjectSettings : Form
     {
-        public Logger()
+        public string LanguageName
         {
-
+            set
+            {
+                textBoxLanguageName.Text = value;
+            }
+            get
+            {
+                return textBoxLanguageName.Text;
+            }
         }
 
-        public static void Log(string log)
+        public ProjectSettings()
         {
-
-        }
-
-        public static void Error(string log)
-        {
-
-        }
-
-        public static void Warning(string log)
-        {
-
-        }
-
-        public static void Info(string log)
-        {
-
+            InitializeComponent();
         }
     }
 }

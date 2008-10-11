@@ -1,4 +1,20 @@
-﻿using System;
+﻿/*
+ * Copyright 2008 Ruwan Janapriya Egoda Gamage. http://www.janapriya.net
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,10 +27,43 @@ namespace JTessaract
     {
         string tesseractBinaryFolder = "C:\\ruwan\\";
 
+        public event EventCompletedDelegate EventCompleted = null;
+
+        public string TesseractBinaryFolder
+        {
+            get { return tesseractBinaryFolder; }
+            set { tesseractBinaryFolder = value; }
+        }
+
         public TesseractWrapper()
         {
 
         }
+
+        public bool CreateBoxFiles(string projectFolder, ArrayList sourceImages, bool overwriteExisting)
+        {
+            int count = sourceImages.Count;
+
+            for (int i = 0; i < count; i++)
+            {
+                string fileName = (string)sourceImages[i];
+                string fileNameSegment = fileName.Substring(0, fileName.LastIndexOf('.'));
+
+                if (!File.Exists(projectFolder + fileNameSegment + ".box"))
+                {
+                    CreateBoxFile(projectFolder, fileName);
+                }
+                else
+                {
+                    if (overwriteExisting)
+                    {
+                        CreateBoxFile(projectFolder, fileName);
+                    }
+                }
+            }
+
+            return true;
+        }               
 
         public bool CreateBoxFile(string projectFolder, string imageFile)
         {
@@ -55,7 +104,25 @@ namespace JTessaract
             {
             }
 
+            if (EventCompleted != null)
+                EventCompleted(GetTesseractLog(projectFolder), null);
+
             return true;
+        }
+
+        public bool CreateTrainingFiles(string projectFolder, ArrayList sourceImages, bool overwriteExisting)
+        {
+            // TODO: handle overwrite case
+            int count = sourceImages.Count;
+            bool returnFlag = true;
+
+            for (int i = 0; i < count; i++)
+            {
+                string fileName = (string)sourceImages[i];
+                returnFlag = returnFlag & CreateTrainingFile(projectFolder, fileName);
+            }
+
+            return returnFlag;
         }
 
         public bool CreateTrainingFile(string projectFolder, string imageFile)
@@ -75,6 +142,9 @@ namespace JTessaract
             catch
             {
             }
+
+            if (EventCompleted != null)
+                EventCompleted(GetTesseractLog(projectFolder), null);
 
             return true;
         }
@@ -108,6 +178,9 @@ namespace JTessaract
                 }
             }
 
+            if (EventCompleted != null)
+                EventCompleted(GetTesseractLog(projectFolder), null); 
+
             return true;
         }
 
@@ -139,6 +212,9 @@ namespace JTessaract
                 }
             }
 
+            if (EventCompleted != null)
+                EventCompleted(GetTesseractLog(projectFolder), null); 
+
             return true;
         }
 
@@ -164,12 +240,14 @@ namespace JTessaract
             {
             }
 
+            if (EventCompleted != null)
+                EventCompleted(GetTesseractLog(projectFolder), null); 
+
             return true;
         }
 
         public bool CreateDangAmbigs(string projectFolder)
         {
-            int exitCode;
             if ((projectFolder.LastIndexOf('\\') + 1) != projectFolder.Length)
             {
                 projectFolder += '\\';
@@ -179,6 +257,9 @@ namespace JTessaract
             {
                 File.Copy(projectFolder + "ambiguities.txt", projectFolder + "DangAmbigs");
             }
+
+            if (EventCompleted != null)
+                EventCompleted(GetTesseractLog(projectFolder), null); 
 
             return true;
         }
@@ -259,6 +340,10 @@ namespace JTessaract
             {
                 File.Copy(projectFolder + file, projectFolder + "\\langpack\\" + languageName + "." + file);
             }
+
+            if (EventCompleted != null)
+                EventCompleted("Language Pack Created", null);
+
             return true;
         }
         
@@ -267,7 +352,7 @@ namespace JTessaract
             System.Diagnostics.ProcessStartInfo psi = new System.Diagnostics.ProcessStartInfo(path + command, parameters);
             //psi.RedirectStandardOutput = true;
             psi.UseShellExecute = true;
-            //psi.WorkingDirectory = projectFolder;
+            psi.WorkingDirectory = projectFolder;
             psi.CreateNoWindow = true;
 
             System.Diagnostics.Process process = System.Diagnostics.Process.Start(psi);
@@ -281,7 +366,7 @@ namespace JTessaract
 
         internal string GetTesseractLog(string projectFolder)
         {
-            string logFileName = tesseractBinaryFolder + "tesseract.log";
+            string logFileName = projectFolder + "tesseract.log";
             if (File.Exists(logFileName))
             {
                 return File.ReadAllText(logFileName);
@@ -289,5 +374,7 @@ namespace JTessaract
 
             return "";
         }
+
+        public delegate void EventCompletedDelegate(string tesseractLog, object result);
     }
 }

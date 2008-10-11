@@ -36,7 +36,7 @@
             this.addBeforeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addAfterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStripCharactorMap = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newProjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openProjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,22 +51,30 @@
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBoxAmbiguity = new System.Windows.Forms.TextBox();
             this.tabPageWords = new System.Windows.Forms.TabPage();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.tabControlWordsCharactors = new System.Windows.Forms.TabControl();
+            this.tabPageWordList = new System.Windows.Forms.TabPage();
+            this.labelWordsList = new System.Windows.Forms.Label();
+            this.textBoxWordsList = new System.Windows.Forms.TextBox();
+            this.tabPageFrequentWordsList = new System.Windows.Forms.TabPage();
+            this.labelFrequentWordsList = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxFrequentWordsList = new System.Windows.Forms.TextBox();
+            this.tabPageUserWords = new System.Windows.Forms.TabPage();
+            this.labelUserWords = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBoxUserWords = new System.Windows.Forms.TextBox();
+            this.tabPageAmbiguity = new System.Windows.Forms.TabPage();
+            this.labelAmbiguity = new System.Windows.Forms.Label();
+            this.textBoxAmbiguity = new System.Windows.Forms.TextBox();
             this.tabPageSourceImages = new System.Windows.Forms.TabPage();
             this.tabControlImages = new System.Windows.Forms.TabControl();
             this.tabPageImage = new System.Windows.Forms.TabPage();
             this.groupBox = new System.Windows.Forms.GroupBox();
+            this.buttonNavigateNext = new System.Windows.Forms.Button();
+            this.buttonNavigatePrevious = new System.Windows.Forms.Button();
+            this.buttonNavigateFirst = new System.Windows.Forms.Button();
+            this.buttonNavigateEnd = new System.Windows.Forms.Button();
             this.textBoxUnicode6 = new System.Windows.Forms.TextBox();
             this.buttonSetCharactors = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -85,10 +93,8 @@
             this.columnHeaderY_TR = new System.Windows.Forms.ColumnHeader();
             this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
             this.tabPageBoxFile = new System.Windows.Forms.TabPage();
-            this.buttonUpdateBoxFile = new System.Windows.Forms.Button();
             this.textBoxBoxFile = new System.Windows.Forms.TextBox();
             this.tabPageTrainFile = new System.Windows.Forms.TabPage();
-            this.buttonUpdateTrainingFile = new System.Windows.Forms.Button();
             this.textBoxTrainingFile = new System.Windows.Forms.TextBox();
             this.buttonRemoveSourceImages = new System.Windows.Forms.Button();
             this.buttonAddSourceImages = new System.Windows.Forms.Button();
@@ -97,23 +103,39 @@
             this.columnHeaderFileName = new System.Windows.Forms.ColumnHeader();
             this.columnHeaderBox = new System.Windows.Forms.ColumnHeader();
             this.tabPageProjectAssist = new System.Windows.Forms.TabPage();
-            this.tesseractLog = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.buttonSaveLanguagePack = new System.Windows.Forms.Button();
+            this.buttonAdvancedMode = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.buttonSaveLangPack = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.buttonAmbiguity = new System.Windows.Forms.Button();
             this.buttonDictionary = new System.Windows.Forms.Button();
-            this.buttonGenerateDictionary = new System.Windows.Forms.Button();
-            this.buttonGenerateTrainingNClustering = new System.Windows.Forms.Button();
             this.buttonCharSet = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.buttonCluster = new System.Windows.Forms.Button();
+            this.buttonCreateTRFiles = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonImportedImages = new System.Windows.Forms.Button();
+            this.buttonGenerateBoxFiles = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.buttonLoadImages = new System.Windows.Forms.Button();
+            this.buttonGenerateTrainingNClustering = new System.Windows.Forms.Button();
+            this.buttonGenerateDictionary = new System.Windows.Forms.Button();
+            this.buttonSaveLanguagePack = new System.Windows.Forms.Button();
+            this.textBoxTesseractLog = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.preview = new JTessaract.Preview();
             this.canvas = new JTessaract.Canvas();
             this.previewPerChar = new JTessaract.PreviewPerChar();
             this.contextMenuStrip.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.tabPage3.SuspendLayout();
             this.tabPageWords.SuspendLayout();
+            this.tabControlWordsCharactors.SuspendLayout();
+            this.tabPageWordList.SuspendLayout();
+            this.tabPageFrequentWordsList.SuspendLayout();
+            this.tabPageUserWords.SuspendLayout();
+            this.tabPageAmbiguity.SuspendLayout();
             this.tabPageSourceImages.SuspendLayout();
             this.tabControlImages.SuspendLayout();
             this.tabPageImage.SuspendLayout();
@@ -121,6 +143,12 @@
             this.tabPageBoxFile.SuspendLayout();
             this.tabPageTrainFile.SuspendLayout();
             this.tabPageProjectAssist.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -162,14 +190,12 @@
             this.addBeforeToolStripMenuItem.Name = "addBeforeToolStripMenuItem";
             this.addBeforeToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.addBeforeToolStripMenuItem.Text = "Add Before";
-            this.addBeforeToolStripMenuItem.Click += new System.EventHandler(this.addBeforeToolStripMenuItem_Click);
             // 
             // addAfterToolStripMenuItem
             // 
             this.addAfterToolStripMenuItem.Name = "addAfterToolStripMenuItem";
             this.addAfterToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.addAfterToolStripMenuItem.Text = "Add After";
-            this.addAfterToolStripMenuItem.Click += new System.EventHandler(this.addAfterToolStripMenuItem_Click);
             // 
             // contextMenuStripCharactorMap
             // 
@@ -177,14 +203,13 @@
             this.contextMenuStripCharactorMap.Name = "contextMenuStripCharactorMap";
             this.contextMenuStripCharactorMap.Size = new System.Drawing.Size(61, 4);
             // 
-            // statusStrip1
+            // statusStrip
             // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 800);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1412, 22);
-            this.statusStrip1.TabIndex = 5;
-            this.statusStrip1.Text = "statusStrip1";
+            this.statusStrip.Location = new System.Drawing.Point(0, 750);
+            this.statusStrip.Name = "statusStrip";
+            this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
+            this.statusStrip.Size = new System.Drawing.Size(1412, 22);
+            this.statusStrip.TabIndex = 5;
             // 
             // fileToolStripMenuItem
             // 
@@ -204,34 +229,37 @@
             // newProjectToolStripMenuItem
             // 
             this.newProjectToolStripMenuItem.Name = "newProjectToolStripMenuItem";
-            this.newProjectToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.newProjectToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.newProjectToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.newProjectToolStripMenuItem.Text = "New Project";
             this.newProjectToolStripMenuItem.Click += new System.EventHandler(this.newProjectToolStripMenuItem_Click);
             // 
             // openProjectToolStripMenuItem
             // 
             this.openProjectToolStripMenuItem.Name = "openProjectToolStripMenuItem";
-            this.openProjectToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.openProjectToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.openProjectToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.openProjectToolStripMenuItem.Text = "Open Project";
             this.openProjectToolStripMenuItem.Click += new System.EventHandler(this.openProjectToolStripMenuItem_Click);
             // 
             // saveProjectToolStripMenuItem
             // 
             this.saveProjectToolStripMenuItem.Name = "saveProjectToolStripMenuItem";
-            this.saveProjectToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.saveProjectToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.saveProjectToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.saveProjectToolStripMenuItem.Text = "Save Project";
             this.saveProjectToolStripMenuItem.Click += new System.EventHandler(this.saveProjectToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(134, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(174, 6);
             this.toolStripSeparator2.Visible = false;
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Visible = false;
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
@@ -239,7 +267,7 @@
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Visible = false;
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
@@ -247,12 +275,12 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(134, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(174, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -268,6 +296,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(1412, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // toolsToolStripMenuItem
             // 
@@ -276,13 +305,13 @@
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
             this.toolsToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.toolsToolStripMenuItem.Text = "Tools";
-            this.toolsToolStripMenuItem.Visible = false;
             // 
             // optionsToolStripMenuItem
             // 
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.optionsToolStripMenuItem.Text = "Options";
+            this.optionsToolStripMenuItem.Click += new System.EventHandler(this.optionsToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -291,147 +320,192 @@
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
             this.helpToolStripMenuItem.Text = "Help";
-            this.helpToolStripMenuItem.Visible = false;
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.aboutToolStripMenuItem.Text = "About...";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
-            // tabPage3
+            // tabPageWords
             // 
-            this.tabPage3.Controls.Add(this.label6);
-            this.tabPage3.Controls.Add(this.label4);
-            this.tabPage3.Controls.Add(this.textBoxAmbiguity);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1404, 750);
-            this.tabPage3.TabIndex = 4;
-            this.tabPage3.Text = "Charactor Ambiguity";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPageWords.Controls.Add(this.tabControlWordsCharactors);
+            this.tabPageWords.Location = new System.Drawing.Point(4, 22);
+            this.tabPageWords.Name = "tabPageWords";
+            this.tabPageWords.Size = new System.Drawing.Size(1404, 697);
+            this.tabPageWords.TabIndex = 3;
+            this.tabPageWords.Text = "Words / Charactors";
+            this.tabPageWords.UseVisualStyleBackColor = true;
             // 
-            // label6
+            // tabControlWordsCharactors
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.tabControlWordsCharactors.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.Location = new System.Drawing.Point(1, 596);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(1400, 154);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "About Charactor Ambiguity";
+            this.tabControlWordsCharactors.Controls.Add(this.tabPageWordList);
+            this.tabControlWordsCharactors.Controls.Add(this.tabPageFrequentWordsList);
+            this.tabControlWordsCharactors.Controls.Add(this.tabPageUserWords);
+            this.tabControlWordsCharactors.Controls.Add(this.tabPageAmbiguity);
+            this.tabControlWordsCharactors.Location = new System.Drawing.Point(3, 3);
+            this.tabControlWordsCharactors.Name = "tabControlWordsCharactors";
+            this.tabControlWordsCharactors.SelectedIndex = 0;
+            this.tabControlWordsCharactors.Size = new System.Drawing.Size(1401, 668);
+            this.tabControlWordsCharactors.TabIndex = 7;
             // 
-            // label4
+            // tabPageWordList
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(5, 11);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Ambiguity";
+            this.tabPageWordList.Controls.Add(this.labelWordsList);
+            this.tabPageWordList.Controls.Add(this.textBoxWordsList);
+            this.tabPageWordList.Location = new System.Drawing.Point(4, 22);
+            this.tabPageWordList.Name = "tabPageWordList";
+            this.tabPageWordList.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageWordList.Size = new System.Drawing.Size(1393, 642);
+            this.tabPageWordList.TabIndex = 0;
+            this.tabPageWordList.Text = "Words List";
+            this.tabPageWordList.UseVisualStyleBackColor = true;
+            // 
+            // labelWordsList
+            // 
+            this.labelWordsList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelWordsList.Location = new System.Drawing.Point(2, 495);
+            this.labelWordsList.Name = "labelWordsList";
+            this.labelWordsList.Size = new System.Drawing.Size(1389, 145);
+            this.labelWordsList.TabIndex = 5;
+            // 
+            // textBoxWordsList
+            // 
+            this.textBoxWordsList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxWordsList.Location = new System.Drawing.Point(0, 1);
+            this.textBoxWordsList.Multiline = true;
+            this.textBoxWordsList.Name = "textBoxWordsList";
+            this.textBoxWordsList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxWordsList.Size = new System.Drawing.Size(1393, 483);
+            this.textBoxWordsList.TabIndex = 0;
+            this.textBoxWordsList.TextChanged += new System.EventHandler(this.textBoxWordsList_TextChanged);
+            // 
+            // tabPageFrequentWordsList
+            // 
+            this.tabPageFrequentWordsList.Controls.Add(this.labelFrequentWordsList);
+            this.tabPageFrequentWordsList.Controls.Add(this.label3);
+            this.tabPageFrequentWordsList.Controls.Add(this.textBoxFrequentWordsList);
+            this.tabPageFrequentWordsList.Location = new System.Drawing.Point(4, 22);
+            this.tabPageFrequentWordsList.Name = "tabPageFrequentWordsList";
+            this.tabPageFrequentWordsList.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageFrequentWordsList.Size = new System.Drawing.Size(1393, 642);
+            this.tabPageFrequentWordsList.TabIndex = 1;
+            this.tabPageFrequentWordsList.Text = "Frequent Words List";
+            this.tabPageFrequentWordsList.UseVisualStyleBackColor = true;
+            // 
+            // labelFrequentWordsList
+            // 
+            this.labelFrequentWordsList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelFrequentWordsList.Location = new System.Drawing.Point(2, 495);
+            this.labelFrequentWordsList.Name = "labelFrequentWordsList";
+            this.labelFrequentWordsList.Size = new System.Drawing.Size(1389, 145);
+            this.labelFrequentWordsList.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(6, 5);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 13);
+            this.label3.TabIndex = 3;
+            // 
+            // textBoxFrequentWordsList
+            // 
+            this.textBoxFrequentWordsList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxFrequentWordsList.Location = new System.Drawing.Point(0, 1);
+            this.textBoxFrequentWordsList.Multiline = true;
+            this.textBoxFrequentWordsList.Name = "textBoxFrequentWordsList";
+            this.textBoxFrequentWordsList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxFrequentWordsList.Size = new System.Drawing.Size(1393, 483);
+            this.textBoxFrequentWordsList.TabIndex = 2;
+            this.textBoxFrequentWordsList.TextChanged += new System.EventHandler(this.textBoxFrequentWordsList_TextChanged);
+            // 
+            // tabPageUserWords
+            // 
+            this.tabPageUserWords.Controls.Add(this.labelUserWords);
+            this.tabPageUserWords.Controls.Add(this.label7);
+            this.tabPageUserWords.Controls.Add(this.textBoxUserWords);
+            this.tabPageUserWords.Location = new System.Drawing.Point(4, 22);
+            this.tabPageUserWords.Name = "tabPageUserWords";
+            this.tabPageUserWords.Size = new System.Drawing.Size(1393, 642);
+            this.tabPageUserWords.TabIndex = 2;
+            this.tabPageUserWords.Text = "User Words";
+            this.tabPageUserWords.UseVisualStyleBackColor = true;
+            // 
+            // labelUserWords
+            // 
+            this.labelUserWords.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelUserWords.Location = new System.Drawing.Point(2, 495);
+            this.labelUserWords.Name = "labelUserWords";
+            this.labelUserWords.Size = new System.Drawing.Size(1389, 145);
+            this.labelUserWords.TabIndex = 7;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(3, 5);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(0, 13);
+            this.label7.TabIndex = 6;
+            // 
+            // textBoxUserWords
+            // 
+            this.textBoxUserWords.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxUserWords.Location = new System.Drawing.Point(0, 1);
+            this.textBoxUserWords.Multiline = true;
+            this.textBoxUserWords.Name = "textBoxUserWords";
+            this.textBoxUserWords.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxUserWords.Size = new System.Drawing.Size(1393, 483);
+            this.textBoxUserWords.TabIndex = 5;
+            this.textBoxUserWords.TextChanged += new System.EventHandler(this.textBoxUserWords_TextChanged);
+            // 
+            // tabPageAmbiguity
+            // 
+            this.tabPageAmbiguity.Controls.Add(this.labelAmbiguity);
+            this.tabPageAmbiguity.Controls.Add(this.textBoxAmbiguity);
+            this.tabPageAmbiguity.Location = new System.Drawing.Point(4, 22);
+            this.tabPageAmbiguity.Name = "tabPageAmbiguity";
+            this.tabPageAmbiguity.Size = new System.Drawing.Size(1393, 642);
+            this.tabPageAmbiguity.TabIndex = 3;
+            this.tabPageAmbiguity.Text = "Ambiguity";
+            this.tabPageAmbiguity.UseVisualStyleBackColor = true;
+            // 
+            // labelAmbiguity
+            // 
+            this.labelAmbiguity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelAmbiguity.Location = new System.Drawing.Point(2, 495);
+            this.labelAmbiguity.Name = "labelAmbiguity";
+            this.labelAmbiguity.Size = new System.Drawing.Size(1389, 145);
+            this.labelAmbiguity.TabIndex = 5;
             // 
             // textBoxAmbiguity
             // 
             this.textBoxAmbiguity.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxAmbiguity.Location = new System.Drawing.Point(3, 31);
+            this.textBoxAmbiguity.Location = new System.Drawing.Point(0, 1);
             this.textBoxAmbiguity.Multiline = true;
             this.textBoxAmbiguity.Name = "textBoxAmbiguity";
             this.textBoxAmbiguity.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxAmbiguity.Size = new System.Drawing.Size(1401, 552);
-            this.textBoxAmbiguity.TabIndex = 2;
-            // 
-            // tabPageWords
-            // 
-            this.tabPageWords.Controls.Add(this.label7);
-            this.tabPageWords.Controls.Add(this.textBox4);
-            this.tabPageWords.Controls.Add(this.label5);
-            this.tabPageWords.Controls.Add(this.label3);
-            this.tabPageWords.Controls.Add(this.textBox2);
-            this.tabPageWords.Controls.Add(this.label1);
-            this.tabPageWords.Controls.Add(this.textBox1);
-            this.tabPageWords.Location = new System.Drawing.Point(4, 22);
-            this.tabPageWords.Name = "tabPageWords";
-            this.tabPageWords.Size = new System.Drawing.Size(1404, 750);
-            this.tabPageWords.TabIndex = 3;
-            this.tabPageWords.Text = "Words List";
-            this.tabPageWords.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(932, 11);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 13);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "User Words";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.Location = new System.Drawing.Point(935, 27);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox4.Size = new System.Drawing.Size(468, 556);
-            this.textBox4.TabIndex = 5;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.Location = new System.Drawing.Point(1, 625);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(1400, 124);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "About word list and frequent word list...";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(454, 11);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Frequent Words List";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBox2.Location = new System.Drawing.Point(457, 27);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox2.Size = new System.Drawing.Size(468, 556);
-            this.textBox2.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Words List";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBox1.Location = new System.Drawing.Point(3, 27);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(444, 556);
-            this.textBox1.TabIndex = 0;
+            this.textBoxAmbiguity.Size = new System.Drawing.Size(1393, 483);
+            this.textBoxAmbiguity.TabIndex = 3;
+            this.textBoxAmbiguity.TextChanged += new System.EventHandler(this.textBoxAmbiguity_TextChanged);
             // 
             // tabPageSourceImages
             // 
@@ -442,7 +516,7 @@
             this.tabPageSourceImages.Location = new System.Drawing.Point(4, 22);
             this.tabPageSourceImages.Name = "tabPageSourceImages";
             this.tabPageSourceImages.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageSourceImages.Size = new System.Drawing.Size(1404, 750);
+            this.tabPageSourceImages.Size = new System.Drawing.Size(1404, 697);
             this.tabPageSourceImages.TabIndex = 0;
             this.tabPageSourceImages.Text = "Source Images";
             this.tabPageSourceImages.UseVisualStyleBackColor = true;
@@ -458,10 +532,8 @@
             this.tabControlImages.Location = new System.Drawing.Point(193, 1);
             this.tabControlImages.Name = "tabControlImages";
             this.tabControlImages.SelectedIndex = 0;
-            this.tabControlImages.Size = new System.Drawing.Size(1211, 748);
+            this.tabControlImages.Size = new System.Drawing.Size(1211, 671);
             this.tabControlImages.TabIndex = 35;
-            this.tabControlImages.TabIndexChanged += new System.EventHandler(this.tabControlImages_TabIndexChanged);
-            this.tabControlImages.SelectedIndexChanged += new System.EventHandler(this.tabControlImages_SelectedIndexChanged);
             // 
             // tabPageImage
             // 
@@ -472,7 +544,7 @@
             this.tabPageImage.Location = new System.Drawing.Point(4, 22);
             this.tabPageImage.Name = "tabPageImage";
             this.tabPageImage.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageImage.Size = new System.Drawing.Size(1203, 722);
+            this.tabPageImage.Size = new System.Drawing.Size(1203, 645);
             this.tabPageImage.TabIndex = 0;
             this.tabPageImage.Text = "Image";
             this.tabPageImage.UseVisualStyleBackColor = true;
@@ -480,6 +552,10 @@
             // groupBox
             // 
             this.groupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox.Controls.Add(this.buttonNavigateNext);
+            this.groupBox.Controls.Add(this.buttonNavigatePrevious);
+            this.groupBox.Controls.Add(this.buttonNavigateFirst);
+            this.groupBox.Controls.Add(this.buttonNavigateEnd);
             this.groupBox.Controls.Add(this.previewPerChar);
             this.groupBox.Controls.Add(this.textBoxUnicode6);
             this.groupBox.Controls.Add(this.buttonSetCharactors);
@@ -493,13 +569,53 @@
             this.groupBox.Controls.Add(this.textBoxUnicode3);
             this.groupBox.Location = new System.Drawing.Point(842, 207);
             this.groupBox.Name = "groupBox";
-            this.groupBox.Size = new System.Drawing.Size(362, 160);
+            this.groupBox.Size = new System.Drawing.Size(362, 189);
             this.groupBox.TabIndex = 30;
             this.groupBox.TabStop = false;
             // 
+            // buttonNavigateNext
+            // 
+            this.buttonNavigateNext.Location = new System.Drawing.Point(185, 118);
+            this.buttonNavigateNext.Name = "buttonNavigateNext";
+            this.buttonNavigateNext.Size = new System.Drawing.Size(108, 29);
+            this.buttonNavigateNext.TabIndex = 22;
+            this.buttonNavigateNext.Text = ">";
+            this.buttonNavigateNext.UseVisualStyleBackColor = true;
+            this.buttonNavigateNext.Click += new System.EventHandler(this.buttonNavigateNext_Click);
+            // 
+            // buttonNavigatePrevious
+            // 
+            this.buttonNavigatePrevious.Location = new System.Drawing.Point(67, 118);
+            this.buttonNavigatePrevious.Name = "buttonNavigatePrevious";
+            this.buttonNavigatePrevious.Size = new System.Drawing.Size(108, 29);
+            this.buttonNavigatePrevious.TabIndex = 21;
+            this.buttonNavigatePrevious.Text = "<";
+            this.buttonNavigatePrevious.UseVisualStyleBackColor = true;
+            this.buttonNavigatePrevious.Click += new System.EventHandler(this.buttonNavigatePrevious_Click);
+            // 
+            // buttonNavigateFirst
+            // 
+            this.buttonNavigateFirst.Location = new System.Drawing.Point(7, 118);
+            this.buttonNavigateFirst.Name = "buttonNavigateFirst";
+            this.buttonNavigateFirst.Size = new System.Drawing.Size(50, 29);
+            this.buttonNavigateFirst.TabIndex = 20;
+            this.buttonNavigateFirst.Text = "|<";
+            this.buttonNavigateFirst.UseVisualStyleBackColor = true;
+            this.buttonNavigateFirst.Click += new System.EventHandler(this.buttonNavigateFirst_Click);
+            // 
+            // buttonNavigateEnd
+            // 
+            this.buttonNavigateEnd.Location = new System.Drawing.Point(303, 118);
+            this.buttonNavigateEnd.Name = "buttonNavigateEnd";
+            this.buttonNavigateEnd.Size = new System.Drawing.Size(49, 29);
+            this.buttonNavigateEnd.TabIndex = 19;
+            this.buttonNavigateEnd.Text = ">|";
+            this.buttonNavigateEnd.UseVisualStyleBackColor = true;
+            this.buttonNavigateEnd.Click += new System.EventHandler(this.buttonNavigateEnd_Click);
+            // 
             // textBoxUnicode6
             // 
-            this.textBoxUnicode6.Location = new System.Drawing.Point(303, 86);
+            this.textBoxUnicode6.Location = new System.Drawing.Point(303, 89);
             this.textBoxUnicode6.Name = "textBoxUnicode6";
             this.textBoxUnicode6.ReadOnly = true;
             this.textBoxUnicode6.Size = new System.Drawing.Size(49, 21);
@@ -507,18 +623,18 @@
             // 
             // buttonSetCharactors
             // 
-            this.buttonSetCharactors.Location = new System.Drawing.Point(7, 121);
+            this.buttonSetCharactors.Location = new System.Drawing.Point(7, 152);
             this.buttonSetCharactors.Name = "buttonSetCharactors";
             this.buttonSetCharactors.Size = new System.Drawing.Size(348, 29);
             this.buttonSetCharactors.TabIndex = 10;
-            this.buttonSetCharactors.Text = "Set";
+            this.buttonSetCharactors.Text = "Apply Changes";
             this.buttonSetCharactors.UseVisualStyleBackColor = true;
             this.buttonSetCharactors.Click += new System.EventHandler(this.buttonSetCharactors_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 136);
+            this.label2.Location = new System.Drawing.Point(5, 75);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 9;
@@ -526,7 +642,7 @@
             // 
             // textBoxUnicode5
             // 
-            this.textBoxUnicode5.Location = new System.Drawing.Point(244, 86);
+            this.textBoxUnicode5.Location = new System.Drawing.Point(244, 89);
             this.textBoxUnicode5.Name = "textBoxUnicode5";
             this.textBoxUnicode5.ReadOnly = true;
             this.textBoxUnicode5.Size = new System.Drawing.Size(49, 21);
@@ -555,7 +671,7 @@
             // 
             // textBoxUnicode1
             // 
-            this.textBoxUnicode1.Location = new System.Drawing.Point(8, 86);
+            this.textBoxUnicode1.Location = new System.Drawing.Point(8, 89);
             this.textBoxUnicode1.Name = "textBoxUnicode1";
             this.textBoxUnicode1.ReadOnly = true;
             this.textBoxUnicode1.Size = new System.Drawing.Size(49, 21);
@@ -563,7 +679,7 @@
             // 
             // textBoxUnicode4
             // 
-            this.textBoxUnicode4.Location = new System.Drawing.Point(185, 86);
+            this.textBoxUnicode4.Location = new System.Drawing.Point(185, 89);
             this.textBoxUnicode4.Name = "textBoxUnicode4";
             this.textBoxUnicode4.ReadOnly = true;
             this.textBoxUnicode4.Size = new System.Drawing.Size(49, 21);
@@ -572,7 +688,7 @@
             // textBoxUnicode2
             // 
             this.textBoxUnicode2.AcceptsReturn = true;
-            this.textBoxUnicode2.Location = new System.Drawing.Point(67, 86);
+            this.textBoxUnicode2.Location = new System.Drawing.Point(67, 89);
             this.textBoxUnicode2.Name = "textBoxUnicode2";
             this.textBoxUnicode2.ReadOnly = true;
             this.textBoxUnicode2.Size = new System.Drawing.Size(49, 21);
@@ -580,7 +696,7 @@
             // 
             // textBoxUnicode3
             // 
-            this.textBoxUnicode3.Location = new System.Drawing.Point(126, 86);
+            this.textBoxUnicode3.Location = new System.Drawing.Point(126, 89);
             this.textBoxUnicode3.Name = "textBoxUnicode3";
             this.textBoxUnicode3.ReadOnly = true;
             this.textBoxUnicode3.Size = new System.Drawing.Size(49, 21);
@@ -599,16 +715,14 @@
             this.columnHeader6});
             this.listView.ContextMenuStrip = this.contextMenuStrip;
             this.listView.FullRowSelect = true;
-            this.listView.GridLines = true;
             this.listView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listView.HideSelection = false;
-            this.listView.Location = new System.Drawing.Point(842, 367);
+            this.listView.Location = new System.Drawing.Point(842, 402);
             this.listView.Name = "listView";
-            this.listView.Size = new System.Drawing.Size(359, 355);
+            this.listView.Size = new System.Drawing.Size(359, 243);
             this.listView.TabIndex = 28;
             this.listView.UseCompatibleStateImageBehavior = false;
             this.listView.View = System.Windows.Forms.View.Details;
-            this.listView.SelectedIndexChanged += new System.EventHandler(this.listView_SelectedIndexChanged);
             this.listView.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.listView_ItemSelectionChanged);
             // 
             // columnHeaderCharactor
@@ -642,61 +756,38 @@
             // 
             // tabPageBoxFile
             // 
-            this.tabPageBoxFile.Controls.Add(this.buttonUpdateBoxFile);
             this.tabPageBoxFile.Controls.Add(this.textBoxBoxFile);
             this.tabPageBoxFile.Location = new System.Drawing.Point(4, 22);
             this.tabPageBoxFile.Name = "tabPageBoxFile";
             this.tabPageBoxFile.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageBoxFile.Size = new System.Drawing.Size(1203, 722);
+            this.tabPageBoxFile.Size = new System.Drawing.Size(1203, 645);
             this.tabPageBoxFile.TabIndex = 1;
             this.tabPageBoxFile.Text = "Box File";
             this.tabPageBoxFile.UseVisualStyleBackColor = true;
-            // 
-            // buttonUpdateBoxFile
-            // 
-            this.buttonUpdateBoxFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonUpdateBoxFile.Location = new System.Drawing.Point(1010, 684);
-            this.buttonUpdateBoxFile.Name = "buttonUpdateBoxFile";
-            this.buttonUpdateBoxFile.Size = new System.Drawing.Size(187, 25);
-            this.buttonUpdateBoxFile.TabIndex = 36;
-            this.buttonUpdateBoxFile.Text = "Update";
-            this.buttonUpdateBoxFile.UseVisualStyleBackColor = true;
-            this.buttonUpdateBoxFile.Click += new System.EventHandler(this.buttonUpdateBoxFile_Click);
             // 
             // textBoxBoxFile
             // 
             this.textBoxBoxFile.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxBoxFile.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxBoxFile.Location = new System.Drawing.Point(1, 2);
             this.textBoxBoxFile.Multiline = true;
             this.textBoxBoxFile.Name = "textBoxBoxFile";
+            this.textBoxBoxFile.ReadOnly = true;
             this.textBoxBoxFile.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxBoxFile.Size = new System.Drawing.Size(1201, 678);
+            this.textBoxBoxFile.Size = new System.Drawing.Size(1201, 642);
             this.textBoxBoxFile.TabIndex = 0;
             // 
             // tabPageTrainFile
             // 
-            this.tabPageTrainFile.Controls.Add(this.buttonUpdateTrainingFile);
             this.tabPageTrainFile.Controls.Add(this.textBoxTrainingFile);
             this.tabPageTrainFile.Location = new System.Drawing.Point(4, 22);
             this.tabPageTrainFile.Name = "tabPageTrainFile";
-            this.tabPageTrainFile.Size = new System.Drawing.Size(1203, 722);
+            this.tabPageTrainFile.Size = new System.Drawing.Size(1203, 645);
             this.tabPageTrainFile.TabIndex = 2;
             this.tabPageTrainFile.Text = "Training Data";
             this.tabPageTrainFile.UseVisualStyleBackColor = true;
-            this.tabPageTrainFile.Click += new System.EventHandler(this.tabPageTrainFile_Click);
-            // 
-            // buttonUpdateTrainingFile
-            // 
-            this.buttonUpdateTrainingFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonUpdateTrainingFile.Location = new System.Drawing.Point(1011, 691);
-            this.buttonUpdateTrainingFile.Name = "buttonUpdateTrainingFile";
-            this.buttonUpdateTrainingFile.Size = new System.Drawing.Size(187, 25);
-            this.buttonUpdateTrainingFile.TabIndex = 38;
-            this.buttonUpdateTrainingFile.Text = "Update";
-            this.buttonUpdateTrainingFile.UseVisualStyleBackColor = true;
-            this.buttonUpdateTrainingFile.Click += new System.EventHandler(this.buttonUpdateTrainingFile_Click);
             // 
             // textBoxTrainingFile
             // 
@@ -709,20 +800,24 @@
             this.textBoxTrainingFile.Name = "textBoxTrainingFile";
             this.textBoxTrainingFile.ReadOnly = true;
             this.textBoxTrainingFile.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxTrainingFile.Size = new System.Drawing.Size(1201, 683);
+            this.textBoxTrainingFile.Size = new System.Drawing.Size(1201, 642);
             this.textBoxTrainingFile.TabIndex = 37;
             // 
             // buttonRemoveSourceImages
             // 
+            this.buttonRemoveSourceImages.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonRemoveSourceImages.Location = new System.Drawing.Point(1, 638);
             this.buttonRemoveSourceImages.Name = "buttonRemoveSourceImages";
             this.buttonRemoveSourceImages.Size = new System.Drawing.Size(187, 25);
             this.buttonRemoveSourceImages.TabIndex = 34;
             this.buttonRemoveSourceImages.Text = "Remove";
             this.buttonRemoveSourceImages.UseVisualStyleBackColor = true;
+            this.buttonRemoveSourceImages.Visible = false;
+            this.buttonRemoveSourceImages.Click += new System.EventHandler(this.buttonRemoveSourceImages_Click);
             // 
             // buttonAddSourceImages
             // 
+            this.buttonAddSourceImages.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonAddSourceImages.Location = new System.Drawing.Point(1, 607);
             this.buttonAddSourceImages.Name = "buttonAddSourceImages";
             this.buttonAddSourceImages.Size = new System.Drawing.Size(187, 25);
@@ -751,7 +846,6 @@
             this.listViewSourceImages.TabIndex = 32;
             this.listViewSourceImages.UseCompatibleStateImageBehavior = false;
             this.listViewSourceImages.View = System.Windows.Forms.View.Details;
-            this.listViewSourceImages.SelectedIndexChanged += new System.EventHandler(this.listViewSourceImages_SelectedIndexChanged);
             this.listViewSourceImages.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.listViewSourceImages_ItemSelectionChanged);
             // 
             // columnHeaderFileNumber
@@ -771,138 +865,282 @@
             // 
             // tabPageProjectAssist
             // 
-            this.tabPageProjectAssist.Controls.Add(this.tesseractLog);
+            this.tabPageProjectAssist.Controls.Add(this.buttonAdvancedMode);
+            this.tabPageProjectAssist.Controls.Add(this.panel2);
+            this.tabPageProjectAssist.Controls.Add(this.panel1);
+            this.tabPageProjectAssist.Controls.Add(this.textBoxTesseractLog);
             this.tabPageProjectAssist.Controls.Add(this.label8);
-            this.tabPageProjectAssist.Controls.Add(this.buttonSaveLanguagePack);
-            this.tabPageProjectAssist.Controls.Add(this.buttonAmbiguity);
-            this.tabPageProjectAssist.Controls.Add(this.buttonDictionary);
-            this.tabPageProjectAssist.Controls.Add(this.buttonGenerateDictionary);
-            this.tabPageProjectAssist.Controls.Add(this.buttonGenerateTrainingNClustering);
-            this.tabPageProjectAssist.Controls.Add(this.buttonCharSet);
-            this.tabPageProjectAssist.Controls.Add(this.buttonLoadImages);
             this.tabPageProjectAssist.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPageProjectAssist.Location = new System.Drawing.Point(4, 22);
             this.tabPageProjectAssist.Name = "tabPageProjectAssist";
             this.tabPageProjectAssist.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageProjectAssist.Size = new System.Drawing.Size(1404, 750);
+            this.tabPageProjectAssist.Size = new System.Drawing.Size(1404, 697);
             this.tabPageProjectAssist.TabIndex = 1;
             this.tabPageProjectAssist.Text = "Project Assistant";
             this.tabPageProjectAssist.UseVisualStyleBackColor = true;
             // 
-            // tesseractLog
+            // buttonAdvancedMode
             // 
-            this.tesseractLog.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.tesseractLog.Location = new System.Drawing.Point(4, 570);
-            this.tesseractLog.Multiline = true;
-            this.tesseractLog.Name = "tesseractLog";
-            this.tesseractLog.ReadOnly = true;
-            this.tesseractLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tesseractLog.Size = new System.Drawing.Size(1400, 180);
-            this.tesseractLog.TabIndex = 12;
+            this.buttonAdvancedMode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAdvancedMode.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAdvancedMode.Location = new System.Drawing.Point(1286, 6);
+            this.buttonAdvancedMode.Name = "buttonAdvancedMode";
+            this.buttonAdvancedMode.Size = new System.Drawing.Size(112, 28);
+            this.buttonAdvancedMode.TabIndex = 9;
+            this.buttonAdvancedMode.Text = "Advanced Mode";
+            this.buttonAdvancedMode.UseVisualStyleBackColor = true;
+            this.buttonAdvancedMode.Click += new System.EventHandler(this.buttonAdvancedMode_Click);
             // 
-            // label8
+            // panel2
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(1, 553);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(83, 13);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "Tesseract.log";
+            this.panel2.Controls.Add(this.groupBox4);
+            this.panel2.Controls.Add(this.groupBox3);
+            this.panel2.Controls.Add(this.groupBox2);
+            this.panel2.Controls.Add(this.groupBox1);
+            this.panel2.Location = new System.Drawing.Point(477, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(367, 278);
+            this.panel2.TabIndex = 14;
+            this.panel2.Visible = false;
             // 
-            // buttonSaveLanguagePack
+            // groupBox4
             // 
-            this.buttonSaveLanguagePack.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSaveLanguagePack.Location = new System.Drawing.Point(6, 142);
-            this.buttonSaveLanguagePack.Name = "buttonSaveLanguagePack";
-            this.buttonSaveLanguagePack.Size = new System.Drawing.Size(348, 28);
-            this.buttonSaveLanguagePack.TabIndex = 9;
-            this.buttonSaveLanguagePack.Text = "4. Save Language Pack...";
-            this.buttonSaveLanguagePack.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSaveLanguagePack.UseVisualStyleBackColor = true;
-            this.buttonSaveLanguagePack.Click += new System.EventHandler(this.buttonSaveLanguagePack_Click);
+            this.groupBox4.Controls.Add(this.buttonSaveLangPack);
+            this.groupBox4.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(4, 211);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(359, 63);
+            this.groupBox4.TabIndex = 17;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "  4. Save Language Pack...  ";
+            // 
+            // buttonSaveLangPack
+            // 
+            this.buttonSaveLangPack.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSaveLangPack.Location = new System.Drawing.Point(5, 20);
+            this.buttonSaveLangPack.Name = "buttonSaveLangPack";
+            this.buttonSaveLangPack.Size = new System.Drawing.Size(348, 28);
+            this.buttonSaveLangPack.TabIndex = 9;
+            this.buttonSaveLangPack.Text = "(i) Save";
+            this.buttonSaveLangPack.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSaveLangPack.UseVisualStyleBackColor = true;
+            this.buttonSaveLangPack.Click += new System.EventHandler(this.buttonSaveLangPack_Click);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.buttonAmbiguity);
+            this.groupBox3.Controls.Add(this.buttonDictionary);
+            this.groupBox3.Controls.Add(this.buttonCharSet);
+            this.groupBox3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(4, 142);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(359, 63);
+            this.groupBox3.TabIndex = 16;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "  3. Generate Words and Charactor Lists...  ";
             // 
             // buttonAmbiguity
             // 
             this.buttonAmbiguity.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAmbiguity.Location = new System.Drawing.Point(252, 108);
+            this.buttonAmbiguity.Location = new System.Drawing.Point(241, 20);
             this.buttonAmbiguity.Name = "buttonAmbiguity";
-            this.buttonAmbiguity.Size = new System.Drawing.Size(102, 28);
+            this.buttonAmbiguity.Size = new System.Drawing.Size(112, 28);
             this.buttonAmbiguity.TabIndex = 8;
-            this.buttonAmbiguity.Text = "Ambiguity";
+            this.buttonAmbiguity.Text = "(iii) Ambiguity";
+            this.buttonAmbiguity.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonAmbiguity.UseVisualStyleBackColor = true;
             this.buttonAmbiguity.Click += new System.EventHandler(this.buttonAmbiguity_Click);
             // 
             // buttonDictionary
             // 
             this.buttonDictionary.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDictionary.Location = new System.Drawing.Point(144, 108);
+            this.buttonDictionary.Location = new System.Drawing.Point(123, 20);
             this.buttonDictionary.Name = "buttonDictionary";
-            this.buttonDictionary.Size = new System.Drawing.Size(102, 28);
+            this.buttonDictionary.Size = new System.Drawing.Size(112, 28);
             this.buttonDictionary.TabIndex = 7;
-            this.buttonDictionary.Text = "Dictionary";
+            this.buttonDictionary.Text = "(ii) Dictionary";
+            this.buttonDictionary.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonDictionary.UseVisualStyleBackColor = true;
             this.buttonDictionary.Click += new System.EventHandler(this.buttonDictionary_Click);
-            // 
-            // buttonGenerateDictionary
-            // 
-            this.buttonGenerateDictionary.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonGenerateDictionary.Location = new System.Drawing.Point(6, 74);
-            this.buttonGenerateDictionary.Name = "buttonGenerateDictionary";
-            this.buttonGenerateDictionary.Size = new System.Drawing.Size(348, 28);
-            this.buttonGenerateDictionary.TabIndex = 6;
-            this.buttonGenerateDictionary.Text = "3. Generate Words and Charactor Lists...";
-            this.buttonGenerateDictionary.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonGenerateDictionary.UseVisualStyleBackColor = true;
-            this.buttonGenerateDictionary.Click += new System.EventHandler(this.buttonGenerateDictionary_Click);
-            // 
-            // buttonGenerateTrainingNClustering
-            // 
-            this.buttonGenerateTrainingNClustering.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonGenerateTrainingNClustering.Location = new System.Drawing.Point(6, 40);
-            this.buttonGenerateTrainingNClustering.Name = "buttonGenerateTrainingNClustering";
-            this.buttonGenerateTrainingNClustering.Size = new System.Drawing.Size(348, 28);
-            this.buttonGenerateTrainingNClustering.TabIndex = 5;
-            this.buttonGenerateTrainingNClustering.Text = "2. Generate Training Data Set && Cluster...";
-            this.buttonGenerateTrainingNClustering.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonGenerateTrainingNClustering.UseVisualStyleBackColor = true;
-            this.buttonGenerateTrainingNClustering.Click += new System.EventHandler(this.buttonGenerateTrainingNClustering_Click);
             // 
             // buttonCharSet
             // 
             this.buttonCharSet.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCharSet.Location = new System.Drawing.Point(36, 108);
+            this.buttonCharSet.Location = new System.Drawing.Point(5, 20);
             this.buttonCharSet.Name = "buttonCharSet";
-            this.buttonCharSet.Size = new System.Drawing.Size(102, 28);
+            this.buttonCharSet.Size = new System.Drawing.Size(112, 28);
             this.buttonCharSet.TabIndex = 3;
-            this.buttonCharSet.Text = "Char Set";
+            this.buttonCharSet.Text = "(i) Char Set";
+            this.buttonCharSet.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonCharSet.UseVisualStyleBackColor = true;
             this.buttonCharSet.Click += new System.EventHandler(this.buttonCharSet_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.buttonCluster);
+            this.groupBox2.Controls.Add(this.buttonCreateTRFiles);
+            this.groupBox2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(4, 73);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(359, 63);
+            this.groupBox2.TabIndex = 15;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "  2. Generate Training Data Set && Cluster...  ";
+            // 
+            // buttonCluster
+            // 
+            this.buttonCluster.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCluster.Location = new System.Drawing.Point(182, 20);
+            this.buttonCluster.Name = "buttonCluster";
+            this.buttonCluster.Size = new System.Drawing.Size(171, 28);
+            this.buttonCluster.TabIndex = 13;
+            this.buttonCluster.Text = "(ii) Cluster";
+            this.buttonCluster.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCluster.UseVisualStyleBackColor = true;
+            this.buttonCluster.Click += new System.EventHandler(this.buttonCluster_Click);
+            // 
+            // buttonCreateTRFiles
+            // 
+            this.buttonCreateTRFiles.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCreateTRFiles.Location = new System.Drawing.Point(5, 20);
+            this.buttonCreateTRFiles.Name = "buttonCreateTRFiles";
+            this.buttonCreateTRFiles.Size = new System.Drawing.Size(171, 28);
+            this.buttonCreateTRFiles.TabIndex = 12;
+            this.buttonCreateTRFiles.Text = "(i) Create *.tr files";
+            this.buttonCreateTRFiles.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCreateTRFiles.UseVisualStyleBackColor = true;
+            this.buttonCreateTRFiles.Click += new System.EventHandler(this.buttonCreateTRFiles_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.buttonImportedImages);
+            this.groupBox1.Controls.Add(this.buttonGenerateBoxFiles);
+            this.groupBox1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(4, 4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(359, 63);
+            this.groupBox1.TabIndex = 14;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "  1. Load Images... ";
+            // 
+            // buttonImportedImages
+            // 
+            this.buttonImportedImages.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonImportedImages.Location = new System.Drawing.Point(6, 20);
+            this.buttonImportedImages.Name = "buttonImportedImages";
+            this.buttonImportedImages.Size = new System.Drawing.Size(171, 28);
+            this.buttonImportedImages.TabIndex = 10;
+            this.buttonImportedImages.Text = "(i) Import Images";
+            this.buttonImportedImages.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonImportedImages.UseVisualStyleBackColor = true;
+            this.buttonImportedImages.Click += new System.EventHandler(this.buttonImportedImages_Click);
+            // 
+            // buttonGenerateBoxFiles
+            // 
+            this.buttonGenerateBoxFiles.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonGenerateBoxFiles.Location = new System.Drawing.Point(183, 20);
+            this.buttonGenerateBoxFiles.Name = "buttonGenerateBoxFiles";
+            this.buttonGenerateBoxFiles.Size = new System.Drawing.Size(171, 28);
+            this.buttonGenerateBoxFiles.TabIndex = 11;
+            this.buttonGenerateBoxFiles.Text = "(ii) Generate *.box files";
+            this.buttonGenerateBoxFiles.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonGenerateBoxFiles.UseVisualStyleBackColor = true;
+            this.buttonGenerateBoxFiles.Click += new System.EventHandler(this.buttonGenerateBoxFiles_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.buttonLoadImages);
+            this.panel1.Controls.Add(this.buttonGenerateTrainingNClustering);
+            this.panel1.Controls.Add(this.buttonGenerateDictionary);
+            this.panel1.Controls.Add(this.buttonSaveLanguagePack);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(367, 137);
+            this.panel1.TabIndex = 13;
             // 
             // buttonLoadImages
             // 
             this.buttonLoadImages.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLoadImages.Location = new System.Drawing.Point(6, 6);
+            this.buttonLoadImages.Location = new System.Drawing.Point(4, 3);
             this.buttonLoadImages.Name = "buttonLoadImages";
-            this.buttonLoadImages.Size = new System.Drawing.Size(348, 28);
+            this.buttonLoadImages.Size = new System.Drawing.Size(358, 28);
             this.buttonLoadImages.TabIndex = 0;
             this.buttonLoadImages.Text = "1. Load Images.....";
             this.buttonLoadImages.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonLoadImages.UseVisualStyleBackColor = true;
             this.buttonLoadImages.Click += new System.EventHandler(this.buttonLoadImages_Click);
             // 
+            // buttonGenerateTrainingNClustering
+            // 
+            this.buttonGenerateTrainingNClustering.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonGenerateTrainingNClustering.Location = new System.Drawing.Point(4, 37);
+            this.buttonGenerateTrainingNClustering.Name = "buttonGenerateTrainingNClustering";
+            this.buttonGenerateTrainingNClustering.Size = new System.Drawing.Size(358, 28);
+            this.buttonGenerateTrainingNClustering.TabIndex = 5;
+            this.buttonGenerateTrainingNClustering.Text = "2. Generate Training Data Set && Cluster...";
+            this.buttonGenerateTrainingNClustering.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonGenerateTrainingNClustering.UseVisualStyleBackColor = true;
+            this.buttonGenerateTrainingNClustering.Click += new System.EventHandler(this.buttonGenerateTrainingNClustering_Click);
+            // 
+            // buttonGenerateDictionary
+            // 
+            this.buttonGenerateDictionary.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonGenerateDictionary.Location = new System.Drawing.Point(4, 71);
+            this.buttonGenerateDictionary.Name = "buttonGenerateDictionary";
+            this.buttonGenerateDictionary.Size = new System.Drawing.Size(358, 28);
+            this.buttonGenerateDictionary.TabIndex = 6;
+            this.buttonGenerateDictionary.Text = "3. Generate Words and Charactor Lists...";
+            this.buttonGenerateDictionary.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonGenerateDictionary.UseVisualStyleBackColor = true;
+            this.buttonGenerateDictionary.Click += new System.EventHandler(this.buttonGenerateDictionary_Click);
+            // 
+            // buttonSaveLanguagePack
+            // 
+            this.buttonSaveLanguagePack.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSaveLanguagePack.Location = new System.Drawing.Point(4, 105);
+            this.buttonSaveLanguagePack.Name = "buttonSaveLanguagePack";
+            this.buttonSaveLanguagePack.Size = new System.Drawing.Size(358, 28);
+            this.buttonSaveLanguagePack.TabIndex = 9;
+            this.buttonSaveLanguagePack.Text = "4. Save Language Pack...";
+            this.buttonSaveLanguagePack.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSaveLanguagePack.UseVisualStyleBackColor = true;
+            this.buttonSaveLanguagePack.Click += new System.EventHandler(this.buttonSaveLanguagePack_Click);
+            // 
+            // textBoxTesseractLog
+            // 
+            this.textBoxTesseractLog.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxTesseractLog.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxTesseractLog.Location = new System.Drawing.Point(0, 516);
+            this.textBoxTesseractLog.Multiline = true;
+            this.textBoxTesseractLog.Name = "textBoxTesseractLog";
+            this.textBoxTesseractLog.ReadOnly = true;
+            this.textBoxTesseractLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxTesseractLog.Size = new System.Drawing.Size(1402, 180);
+            this.textBoxTesseractLog.TabIndex = 12;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(-1, 499);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(83, 13);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "Tesseract.log";
+            // 
             // tabControl
             // 
+            this.tabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl.Controls.Add(this.tabPageProjectAssist);
             this.tabControl.Controls.Add(this.tabPageSourceImages);
             this.tabControl.Controls.Add(this.tabPageWords);
-            this.tabControl.Controls.Add(this.tabPage3);
-            this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl.Location = new System.Drawing.Point(0, 24);
+            this.tabControl.Location = new System.Drawing.Point(0, 27);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(1412, 776);
+            this.tabControl.Size = new System.Drawing.Size(1412, 723);
             this.tabControl.TabIndex = 4;
             // 
             // preview
@@ -928,7 +1166,7 @@
             this.canvas.Location = new System.Drawing.Point(0, 0);
             this.canvas.MainImage = null;
             this.canvas.Name = "canvas";
-            this.canvas.Size = new System.Drawing.Size(840, 722);
+            this.canvas.Size = new System.Drawing.Size(840, 645);
             this.canvas.TabIndex = 29;
             // 
             // previewPerChar
@@ -946,23 +1184,29 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1412, 822);
-            this.Controls.Add(this.tabControl);
+            this.ClientSize = new System.Drawing.Size(1412, 772);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.statusStrip);
+            this.Controls.Add(this.tabControl);
             this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Mainform";
-            this.Text = "JTesseract Training Assist";
+            this.Text = "JTesseract";
             this.Load += new System.EventHandler(this.Mainform_Load);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Mainform_FormClosing);
             this.contextMenuStrip.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
             this.tabPageWords.ResumeLayout(false);
-            this.tabPageWords.PerformLayout();
+            this.tabControlWordsCharactors.ResumeLayout(false);
+            this.tabPageWordList.ResumeLayout(false);
+            this.tabPageWordList.PerformLayout();
+            this.tabPageFrequentWordsList.ResumeLayout(false);
+            this.tabPageFrequentWordsList.PerformLayout();
+            this.tabPageUserWords.ResumeLayout(false);
+            this.tabPageUserWords.PerformLayout();
+            this.tabPageAmbiguity.ResumeLayout(false);
+            this.tabPageAmbiguity.PerformLayout();
             this.tabPageSourceImages.ResumeLayout(false);
             this.tabControlImages.ResumeLayout(false);
             this.tabPageImage.ResumeLayout(false);
@@ -974,6 +1218,12 @@
             this.tabPageTrainFile.PerformLayout();
             this.tabPageProjectAssist.ResumeLayout(false);
             this.tabPageProjectAssist.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.tabControl.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -989,14 +1239,13 @@
         private System.Windows.Forms.ToolStripMenuItem addAfterToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStripCharactorMap;
         private System.Windows.Forms.ToolStripMenuItem mergeToolStripMenuItem;
-        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPageWords;
         private System.Windows.Forms.TabPage tabPageSourceImages;
         private System.Windows.Forms.ListView listViewSourceImages;
@@ -1012,14 +1261,9 @@
         private System.Windows.Forms.Button buttonAmbiguity;
         private System.Windows.Forms.Button buttonDictionary;
         private System.Windows.Forms.Button buttonSaveLanguagePack;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxWordsList;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBoxAmbiguity;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBoxFrequentWordsList;
         private System.Windows.Forms.ToolStripMenuItem newProjectToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openProjectToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
@@ -1031,7 +1275,7 @@
         private System.Windows.Forms.Button buttonAddSourceImages;
         private System.Windows.Forms.Button buttonRemoveSourceImages;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxUserWords;
         private System.Windows.Forms.TabControl tabControlImages;
         private System.Windows.Forms.TabPage tabPageImage;
         private Canvas canvas;
@@ -1057,12 +1301,36 @@
         private Preview preview;
         private System.Windows.Forms.TabPage tabPageBoxFile;
         private System.Windows.Forms.TabPage tabPageTrainFile;
-        private System.Windows.Forms.Button buttonUpdateBoxFile;
         private System.Windows.Forms.TextBox textBoxBoxFile;
-        private System.Windows.Forms.Button buttonUpdateTrainingFile;
         private System.Windows.Forms.TextBox textBoxTrainingFile;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox tesseractLog;
+        private System.Windows.Forms.TextBox textBoxTesseractLog;
+        private System.Windows.Forms.TabControl tabControlWordsCharactors;
+        private System.Windows.Forms.TabPage tabPageWordList;
+        private System.Windows.Forms.TabPage tabPageFrequentWordsList;
+        private System.Windows.Forms.TabPage tabPageUserWords;
+        private System.Windows.Forms.Label labelWordsList;
+        private System.Windows.Forms.Label labelFrequentWordsList;
+        private System.Windows.Forms.Label labelUserWords;
+        private System.Windows.Forms.TabPage tabPageAmbiguity;
+        private System.Windows.Forms.Label labelAmbiguity;
+        private System.Windows.Forms.TextBox textBoxAmbiguity;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button buttonImportedImages;
+        private System.Windows.Forms.Button buttonGenerateBoxFiles;
+        private System.Windows.Forms.Button buttonSaveLangPack;
+        private System.Windows.Forms.Button buttonCluster;
+        private System.Windows.Forms.Button buttonCreateTRFiles;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button buttonAdvancedMode;
+        private System.Windows.Forms.Button buttonNavigateEnd;
+        private System.Windows.Forms.Button buttonNavigateNext;
+        private System.Windows.Forms.Button buttonNavigatePrevious;
+        private System.Windows.Forms.Button buttonNavigateFirst;
     }
 }
 
