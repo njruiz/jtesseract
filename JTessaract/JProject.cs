@@ -1,4 +1,20 @@
-﻿using System;
+﻿/*
+ * Copyright 2008 Ruwan Janapriya Egoda Gamage. http://www.janapriya.net
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +28,13 @@ namespace JTessaract
     {
         private string languageName = "ras";//null;
         private string version = "1.0"; //null;
+        private string languageFontFamily = @"Verdana";
+
+        public string LanguageFontFamily
+        {
+            get { return languageFontFamily; }
+            set { languageFontFamily = value; }
+        }
 
         public string LanguageName
         {
@@ -76,10 +99,10 @@ namespace JTessaract
             }
 
             Directory.CreateDirectory(projectFolder);
-            File.WriteAllText(projectFolder + @"\frequent_words.txt", "");
-            File.WriteAllText(projectFolder + @"\words.txt", "");
-            File.WriteAllText(projectFolder + @"\user_words.txt", "");
-            File.WriteAllText(projectFolder + @"\ambiguities.txt", "");
+            File.WriteAllText(projectFolder + @"\frequent_words.txt", "", Encoding.UTF8);
+            File.WriteAllText(projectFolder + @"\words.txt", "", Encoding.UTF8);
+            File.WriteAllText(projectFolder + @"\user_words.txt", "", Encoding.UTF8);
+            File.WriteAllText(projectFolder + @"\ambiguities.txt", "", Encoding.UTF8);
             return true;
         }
 
@@ -123,6 +146,15 @@ namespace JTessaract
                 {
                     sourceImages.Add(node.InnerText);
                 }
+
+                if (!File.Exists(projectFolder + @"\frequent_words.txt"))
+                    File.WriteAllText(projectFolder + @"\frequent_words.txt", "", Encoding.UTF8);
+                if (!File.Exists(projectFolder + @"\words.txt"))
+                    File.WriteAllText(projectFolder + @"\words.txt", "", Encoding.UTF8);
+                if (!File.Exists(projectFolder + @"\user_words.txt"))
+                    File.WriteAllText(projectFolder + @"\user_words.txt", "", Encoding.UTF8);
+                if (!File.Exists(projectFolder + @"\ambiguities.txt"))
+                    File.WriteAllText(projectFolder + @"\ambiguities.txt", "", Encoding.UTF8);
 
                 operationSuccess = true;
             }
