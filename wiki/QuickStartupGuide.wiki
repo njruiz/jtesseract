@@ -2,13 +2,13 @@
 #labels Featured
 
 = Quick Start up Guide =
-JTesseract uses _tes_ file extension for storing its project files. It contains the list of image files used for the training.
+JTesseract uses _tes_ file extension for storing its project files. 
 
 ==Step 1==
 Open JTesseract.exe
 
 ==Step 2==
-First make sure you have copied tesseract binary files in to a known location. Next let JTesseract know the directory by using menu *Tools->Options*
+First make sure you have copied *all* tesseract binary files in to a known location. Next let JTesseract know the directory by using menu *Tools->Options*
 
 ==Step 3==
 Use menu *File->New Project*
