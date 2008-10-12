@@ -26,7 +26,12 @@ JTesseract now imports all the images to the project folder and create correspon
 Use "Source Images" tab for box file editing. 
 You can see the list of images imported in the top left corner of the "Source Images" tab. 
 You can *click on each image* to proceed to *box file editing. *
-Use mouse wheel to zoom in and zoom out in the main window. Click on navigation buttons to navigate character by character. Once you find a fault reading change those characters to correct ones and click on "Apply Changes" button, just under navigation buttons.
+
+Use mouse wheel to zoom in and zoom out in the main window. 
+
+Click on navigation buttons to navigate character by character. 
+
+Once you find a faulty reading, correct them and click on "Apply Changes" button, found just under navigation buttons.
 
 Once you are done editing box files corresponding to all images proceed to step 6. 
 
