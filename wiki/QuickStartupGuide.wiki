@@ -2,7 +2,7 @@
 #labels Featured
 
 = Quick Start up Guide =
-JTesseract uses *.tes file extension for storing its project files. It contains the list of image files used for the training.
+JTesseract uses \*.tes file extension for storing its project files. It contains the list of image files used for the training.
 
 1. Open JTesseract.exe
 
@@ -50,4 +50,3 @@ I would recomment using following GUI application for the process.
 http://softi.co.uk/freeocr.htm (copy the language pack to <FreeOCR installed folder>\tesseract\tessdata\ and select the language from the top-right corner after restarting the application)
 
 11. Now if you are free, how about writing a nice/better user guide. 
-
