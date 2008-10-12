@@ -1,6 +1,4 @@
-#summary One-sentence summary of this page.
 #labels Featured
-
 = Quick Start up Guide =
 JTesseract uses _tes_ file extension for storing its project files. 
 
