@@ -12,14 +12,14 @@ First make sure you have copied tesseract binary files in to a known location. N
 
 ==Step 3==
 Use menu *File->New Project*
-   (i) JTesseract will prompt a "Project Settings" dialog to ask a language name. This is the *3 letter language code* you are going to use for the language pack. The default "eng" refers to the English language. 
-   (ii) JTesseract next prompts a "Save As" dialog to save the project. Feel free to navigate to your preferred directory and provide a *valid project name*. Just remember it will create a sub folder and import all the training files in to it. 
+  * JTesseract will prompt a "Project Settings" dialog to ask a language name. This is the *3 letter language code* you are going to use for the language pack. The default "eng" refers to the English language. 
+  * JTesseract next prompts a "Save As" dialog to save the project. Feel free to navigate to your preferred directory and provide a *valid project name*. Just remember it will create a sub folder and import all the training files in to it. 
 i.e. If you provide C:\my_tess\srilanka.tes, JTesseract will create C:\my_tess\srilanka\ sub folder and store all the images and intermediate files in it.
 
 ==Step 4==
 Under "Project Assistant" tab, 
-   (i) Click on *"1. Load Images..."* button. You will be prompted with a "File Open" dialog box. 
-   (ii) Now *select all the training images* you want to use for the training. At the end click on "Open" button. 
+  * Click on *"1. Load Images..."* button. You will be prompted with a "File Open" dialog box. 
+  * Now *select all the training images* you want to use for the training. At the end click on "Open" button. 
 JTesseract now imports all the images to the project folder and create corresponding box files. 
 
 ==Step 5==
