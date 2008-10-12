@@ -48,16 +48,15 @@ Now lets click on *"4. Save Language Pack..."* button.
 Again JTesseract will prompt you with a language code (in case you have changed your mind..). Once you press OK, JTesseract will save the language pack under <your project location>\language_pack\ folder. 
 i.e. If you saved this project at C:\my_tess\srilanka.tes, you can find the language pack at C:\my_tess\srilanka\language_pack\ folder.
 
-==Step 9==
-If everything goes smoothly, Congratulations you are *DONE!* 
+=== If everything goes smoothly, Congratulations you are *DONE!* ===
 
 Remember you can go back to any of the steps above and re-do everything any number of time. 
 
-==Step 10==
+==Next==
 You can use the language pack with tesseract to OCR the language you have just trained. 
 
 I would recomment using following GUI application for the process.
 http://softi.co.uk/freeocr.htm (copy the language pack to <FreeOCR installed folder>\tesseract\tessdata\ and select the language from the top-right corner after restarting the application)
 
-==Step 11==
+==How about?==
 Now if you are free, how about writing a nice/better user guide. 
